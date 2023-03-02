@@ -1,0 +1,111 @@
+@import "src/theme/variables";
+
+:host {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-primary;
+  width: 100%;
+  padding: $padding-small 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+
+  max-width: 75px;
+  @media (min-width: 768px) {
+    max-width: 120px;
+  }
+}
+
+.navbar-mobile {
+  button:first-child {
+    background: none;
+    border: none;
+    color: $color-light;
+    i {
+      display: inline;
+      text-align: center;
+      width: 1px;
+    }
+  }
+
+  .expanded-menu {
+    background-color: $background-color-3;
+    height: 100vh;
+    width: 100%;
+    max-width: 425px;
+    position: relative;
+    fa-icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        list-style: none;
+        li {
+          color: $color-light;
+          font-size: $font-size-default;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .mobile-menu-opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all $transition-short;
+  }
+
+  .mobile-menu-closed {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: -1;
+    transition: all $transition-short;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navbar-desktop {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    li {
+      color: $color-light;
+      font-size: $font-size-xs;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        font-size: $font-size-default;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: $font-size-xl;
+      }
+    }
+  }
+}

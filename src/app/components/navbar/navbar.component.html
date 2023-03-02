@@ -1,0 +1,26 @@
+<div class="navbar-mobile">
+  <button (click)="openMenu()">
+    <fa-icon iconName="bars" [style]="{'font-size': '24px'}"></fa-icon>
+  </button>
+  <div class="expanded-menu" [ngClass]="{
+    'mobile-menu-opened': toggleMenu,
+    'mobile-menu-closed': !toggleMenu
+  }">
+    <button (click)="openMenu()">
+      <fa-icon iconName="close" [style]="{'font-size': '24px'}"></fa-icon>
+    </button>
+    <nav>
+      <ul>
+        <li [routerLink]="item.to" *ngFor="let item of menuItems">{{ item.text | uppercase }}</li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<img class="logo" src="assets/images/logo-transoceanic.png" alt="Transoceanic Logo" />
+
+<nav class="navbar-desktop">
+  <ul>
+    <li [routerLink]="item.to" *ngFor="let item of menuItems">{{ item.text | uppercase }}</li>
+  </ul>
+</nav>
