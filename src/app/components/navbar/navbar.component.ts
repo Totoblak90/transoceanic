@@ -19,8 +19,8 @@ export class NavbarComponent {
       to: 'about-us'
     },
     {
-      text: 'Ubicaciones',
-      to: 'locations'
+      text: 'Qué hacemos',
+      to: 'what-we-do'
     },
     {
       text: 'Contactenos',

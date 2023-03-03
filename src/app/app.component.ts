@@ -23,9 +23,9 @@ export class AppComponent implements AfterViewInit {
 
     if (router_outlet_container) {
       if (window.innerWidth <= 768) {
-        router_outlet_container.style.marginTop = '95px'
+        router_outlet_container.style.marginTop = '170px'
       } else {
-        router_outlet_container.style.marginTop = '140px'
+        router_outlet_container.style.marginTop = '320px'
       }
     }
   }

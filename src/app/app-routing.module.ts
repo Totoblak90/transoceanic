@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
   },
   {
-    path: 'locations',
-    loadChildren: () => import('./pages/locations/locations.module').then(m => m.LocationsModule)
+    path: 'what-we-do',
+    loadChildren: () => import('./pages/what-we-do/what-we-do.module').then(m => m.WhatWeDoModule)
   },
   {
     path: 'contact-us',
