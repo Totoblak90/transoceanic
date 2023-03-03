@@ -20,7 +20,7 @@
     i {
       display: inline;
       text-align: center;
-      width: 1px;
+      width: 0.1rem;
     }
   }
 
@@ -28,12 +28,12 @@
     background-color: $background-color-3;
     height: 100vh;
     width: 100%;
-    max-width: 425px;
+    max-width: 42.5rem;
     position: relative;
     fa-icon {
       position: absolute;
-      right: 20px;
-      top: 20px;
+      right: 2rem;
+      top: 2rem;
     }
     nav {
       display: flex;
@@ -44,7 +44,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 3rem;
         list-style: none;
         li {
           color: $color-light;
@@ -84,7 +84,7 @@
   ul {
     width: 100%;
     display: flex;
-    gap: 30px;
+    gap: 3rem;
     list-style: none;
     li {
       color: $color-light;

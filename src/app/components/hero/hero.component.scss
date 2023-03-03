@@ -2,14 +2,14 @@
 
 .hero {
   background-color: $background-color-6;
-  padding: 46px 24px;
+  padding: 4.6rem 2.4rem;
   @media (min-width: 768px) {
-    padding: 92px 48px;
+    padding: 9.2rem 4.8rem;
   }
   h1 {
     text-align: center;
     color: $color-light;
     font-weight: $weight-bold;
-    text-shadow: 0 10px 30px rgba(#000, 0.3);
+    text-shadow: 0 1rem 3re rgba(#000, 0.3);
   }
 }

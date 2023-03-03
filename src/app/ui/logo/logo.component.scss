@@ -3,29 +3,32 @@
 :host {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
   color: $color-light;
   font-weight: $weight-bold;
 }
 
 .logo-icon {
-  max-width: 75px;
+  max-width: 7.5rem;
   @media (min-width: 960px) {
-    max-width: 120px;
+    max-width: 12rem;
   }
 }
 
 .text-container {
   h2 {
     line-height: 1;
-    letter-spacing: 5px;
+    letter-spacing: 0.5rem;
     font-size: $font-size-default;
+    font-family: $font-family-secondary !important;
+    font-weight: 700;
     @media (min-width: 450px) {
       font-size: $font-size-lg;
     }
   }
   p {
     line-height: 1.5;
-    letter-spacing: 3px;
+    letter-spacing: 0.3rem;
+    font-family: $font-family-secondary;
   }
 }

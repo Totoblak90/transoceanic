@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WhatWeDoRoutingModule } from './what-we-do-routing.module';
 import { WhatWeDoComponent } from './what-we-do.component';
+import { UiModule } from '../../ui/ui.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { WhatWeDoComponent } from './what-we-do.component';
   ],
   imports: [
     CommonModule,
-    WhatWeDoRoutingModule
+    WhatWeDoRoutingModule,
+    UiModule
   ]
 })
 export class WhatWeDoModule { }

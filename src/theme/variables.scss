@@ -10,18 +10,22 @@ $color-dark: #212121;
 $color-light: #f5f5f5;
 
 /** TYPOGRAPHY **/
+$font-family-primary: 'Raleway', sans-serif;
+$font-family-secondary: 'Cinzel', serif;
+
+
 $font-size-default: 1.6rem;
 $font-size-sm: 1.4rem;
 $font-size-xs: 1.2rem;
 $font-size-lg: 2rem;
 $font-size-xl: 2.4rem;
 
-$font-size-h1: 42px;
-$font-size-h1-mobile: 27px;
-$font-size-h2: 36px;
-$font-size-h2-mobile: 24px;
-$font-size-h3: 30px;
-$font-size-h3-mobile: 21px;
+$font-size-h1: 4.2rem;
+$font-size-h1-mobile: 2.7rem;
+$font-size-h2: 3.6rem;
+$font-size-h2-mobile: 2.4rem;
+$font-size-h3: 3rem;
+$font-size-h3-mobile: 2.1rem;
 
 $font-color-1: #333;         // negro
 $font-color-2: #FFF;         // blanco

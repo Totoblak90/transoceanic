@@ -1,0 +1,14 @@
+div {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 500px;
+  overflow: hidden;
+  box-shadow: 0 3rem 3rem rgba(#000, 0.2);
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 500px;
+    border: 0.3rem solid #fff;
+  }
+}

@@ -26,9 +26,9 @@ export class AppComponent implements AfterViewInit {
 
     if (router_outlet_container) {
       if (window.innerWidth <= 960) {
-        router_outlet_container.style.marginTop = this.utilitiesService.headerHeightMobile + 'px'
+        router_outlet_container.style.marginTop = this.utilitiesService.headerHeightMobile / 10 + 'rem'
       } else {
-        router_outlet_container.style.marginTop = this.utilitiesService.headerHeightDesktop + 'px'
+        router_outlet_container.style.marginTop = this.utilitiesService.headerHeightDesktop / 10 + 'rem'
       }
     }
   }

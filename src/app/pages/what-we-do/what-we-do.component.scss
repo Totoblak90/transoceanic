@@ -1,0 +1,14 @@
+@import "src/theme/variables";
+
+.what-we-do {
+  padding: $padding-large $padding-small $padding-medium $padding-small;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+
+    &--item:last-child {
+      grid-column: 2 / 3;
+    }
+  }
+}
