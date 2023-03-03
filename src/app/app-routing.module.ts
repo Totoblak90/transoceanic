@@ -10,6 +10,18 @@ const routes: Routes = [
   {
     path: 'about-us',
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
+  {
+    path: 'locations',
+    loadChildren: () => import('./pages/locations/locations.module').then(m => m.LocationsModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./pages/contact-us/contact-us.module').then(m => m.ContactUsModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

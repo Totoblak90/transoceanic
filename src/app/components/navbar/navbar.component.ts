@@ -20,7 +20,7 @@ export class NavbarComponent {
     },
     {
       text: 'Ubicaciones',
-      to: 'location'
+      to: 'locations'
     },
     {
       text: 'Contactenos',

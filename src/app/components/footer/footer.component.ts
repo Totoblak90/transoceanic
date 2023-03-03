@@ -19,7 +19,7 @@ export class FooterComponent {
     },
     {
       text: 'Ubicaciones',
-      to: 'location'
+      to: 'locations'
     }
   ]
 

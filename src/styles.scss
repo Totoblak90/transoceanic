@@ -132,10 +132,10 @@ h3 {
   grid-template-columns: 1fr;
 
   &__title {
-    background-color: $background-color-6;
+    background-color: $background-color-7;
     padding: 46px 24px;
     color: $color-light !important;
-
+    font-weight: $weight-bold;
 
     h2 {
       color: $color-light !important;
