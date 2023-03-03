@@ -2,7 +2,7 @@
 
 @import "./theme/variables";
 @import "./theme/utilities.scss";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
 * {
@@ -11,7 +11,7 @@
   padding: 0;
   line-height: $line-height-small;
   font-weight: inherit;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Cinzel', serif !important;
   font-size: inherit;
   color: inherit;
 }
@@ -22,7 +22,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Cinzel', serif !important;
   font-weight: $weight-normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
