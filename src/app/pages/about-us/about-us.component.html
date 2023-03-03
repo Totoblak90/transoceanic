@@ -1,0 +1,22 @@
+<hero text="QUALITY GOODS TO FIT ANY BUDGET ONE TIMELESS CUSTOMER DRIVEN FOCUS"></hero>
+<section class="main">
+  <h2>
+    {{ 'Marine supply & logistic services' | uppercase }}
+  </h2>
+
+  <article class="about-us-grid">
+    <div class="about-us-grid__item" *ngFor="let item of homeGridItems">
+      <h3 class="about-us-grid__item__title">{{ item.title }}</h3>
+      <div class="about-us-grid__item__info" [innerHtml]="item.info"></div>
+    </div>
+  </article>
+  <section class="what-we-do">
+    <article class="what-we-do__grid" *ngFor="let item of whatWeDoGridItems">
+      <div class="what-we-do__grid__title">
+        <h2 *ngIf="item.title">{{ item.title | uppercase }}</h2>
+        <h5 *ngIf="item.subtitle">{{ item.subtitle | uppercase }}</h5>
+      </div>
+      <div class="what-we-do__grid__highlights" [innerHtml]="item.info"></div>
+    </article>
+  </section>
+</section>
