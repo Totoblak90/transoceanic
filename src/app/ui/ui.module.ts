@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconComponent } from './fa-icon/fa-icon.component';
+import { LogoComponent } from './logo/logo.component';
 
 
 
 @NgModule({
   declarations: [
-    FaIconComponent
+    FaIconComponent,
+    LogoComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    FaIconComponent
+    FaIconComponent,
+    LogoComponent
   ]
 })
 export class UiModule { }

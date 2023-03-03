@@ -1,0 +1,31 @@
+@import "src/theme/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $color-light;
+  font-weight: $weight-bold;
+}
+
+.logo-icon {
+  max-width: 75px;
+  @media (min-width: 960px) {
+    max-width: 120px;
+  }
+}
+
+.text-container {
+  h2 {
+    line-height: 1;
+    letter-spacing: 5px;
+    font-size: $font-size-default;
+    @media (min-width: 450px) {
+      font-size: $font-size-lg;
+    }
+  }
+  p {
+    line-height: 1.5;
+    letter-spacing: 3px;
+  }
+}

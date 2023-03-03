@@ -81,6 +81,16 @@ h3 {
   @media (min-width: 628px) {
     grid-template-columns: 1fr 1fr;
     gap: $padding-medium;
+
+    &__item:nth-child(2) {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+
+    &__item:nth-child(3) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
   }
 
 
@@ -123,109 +133,10 @@ h3 {
     }
 
     @media (min-width: 628px) {
-      padding: 0;
+      padding: 0 $padding-small;
+
     }
   }
-}
-
-.what-we-do__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  &__title {
-    background-color: $background-color-7;
-    padding: 46px 24px;
-    color: $color-light !important;
-    font-weight: $weight-bold;
-
-    h2 {
-      color: $color-light !important;
-      margin-bottom: $margin-xs !important;
-    }
-
-
-    h5 {
-      text-align: center !important;
-    }
-  }
-
-
-  &__highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: $margin-large;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    div:last-child {
-      padding: $padding-medium;
-
-      h3 {
-        margin-bottom: $margin-small;
-      }
-
-      ul {
-        margin-bottom: $margin-small;
-
-        li {
-          margin-left: $margin-large;
-          font-size: $font-size-sm;
-          &:not(:last-child) {
-            margin-bottom: $margin-xs;
-          }
-        }
-
-      }
-
-      p {
-        line-height: $line-height-normal;
-        font-size: $font-size-sm;
-      }
-    }
-  }
-
-  &__highlights:last-child {
-    margin-bottom: 0;
-  }
-
-
-  @media (min-width: 768px) {
-
-    &__highlights {
-      grid-template-columns: 1fr 1fr;
-
-      div {
-
-        &:first-child {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        &:last-child {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        ul {
-
-          li {
-            font-size: $font-size-default !important;
-          }
-        }
-
-        p {
-          font-size: $font-size-default !important;
-        }
-
-      }
-    }
-  }
-
 }
 
 /****************************************************************************************************************************************/

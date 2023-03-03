@@ -15,7 +15,7 @@ export class NavbarComponent {
       to: '/'
     },
     {
-      text: 'Quienes somos',
+      text: 'Quiénes somos',
       to: 'about-us'
     },
     {

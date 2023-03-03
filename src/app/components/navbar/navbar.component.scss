@@ -6,17 +6,10 @@
   align-items: center;
   background-color: $color-primary;
   width: 100%;
-  padding: $padding-small 0;
+  padding: $padding-small;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-.logo {
-  max-width: 150px;
-  @media (min-width: 768px) {
-    max-width: 300px;
-  }
 }
 
 .navbar-mobile {
@@ -78,14 +71,14 @@
     transition: all $transition-short;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     display: none;
   }
 }
 
 .navbar-desktop {
   display: none;
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     display: block;
   }
   ul {
@@ -98,12 +91,16 @@
       font-size: $font-size-xs;
       cursor: pointer;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
+        font-size: $font-size-sm;
+      }
+
+      @media (min-width: 1128px) {
         font-size: $font-size-default;
       }
 
-      @media (min-width: 1024px) {
-        font-size: $font-size-xl;
+      @media (min-width: 1300px) {
+        font-size: $font-size-lg;
       }
     }
   }

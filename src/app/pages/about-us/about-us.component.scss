@@ -2,13 +2,12 @@
 
 .main {
   padding: $padding-huge 0 0 0;
-  h2 {
-    text-align: center;
-    color: $color-secondary;
-    margin-bottom: $margin-large;
-
-    @media (min-width: 768px) {
-      margin-bottom: $margin-large;
+  h3 {
+    margin: 0 auto $margin-medium auto;
+    max-width: 1168px;
+    padding: 0 $padding-medium;
+    @media (min-width: 628px) {
+      padding: 0 $padding-small;
     }
   }
 }
