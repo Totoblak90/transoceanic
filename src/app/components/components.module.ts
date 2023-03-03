@@ -4,13 +4,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UiModule } from '../ui/ui.module';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HeroComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HeroComponent
   ]
 })
 export class ComponentsModule { }

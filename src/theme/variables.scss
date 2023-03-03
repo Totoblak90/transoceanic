@@ -16,6 +16,13 @@ $font-size-xs: 1.2rem;
 $font-size-lg: 2rem;
 $font-size-xl: 2.4rem;
 
+$font-size-h1: 42px;
+$font-size-h1-mobile: 27px;
+$font-size-h2: 36px;
+$font-size-h2-mobile: 24px;
+$font-size-h3: 30px;
+$font-size-h3-mobile: 21px;
+
 $font-color-1: #333;         // negro
 $font-color-2: #FFF;         // blanco
 $font-color-3: #A300D6;      // morado
@@ -26,6 +33,10 @@ $background-color-1: #F5F5F5;    // gris claro
 $background-color-2: #FFF;        // blanco
 $background-color-3: #0E003D;    // morado oscuro
 $background-color-4: #33B5E5;    // azul
+$background-color-5: #180067;    // amarillo
+$background-color-6: #220092;    // verde claro
+$background-color-7: #2B00BC;    // rojo
+$background-color-8: #040012;  // morado
 
 $weight-normal: 500;
 $weight-light: 300;
@@ -39,10 +50,16 @@ $line-height-big: 1.25;
 $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
+$margin-xl: 4rem;
+$margin-xxl: 5rem;
+$margin-huge: 6rem;
 
 $padding-small: 1rem;
 $padding-medium: 2rem;
 $padding-large: 3rem;
+$padding-xl: 4rem;
+$padding-xxl: 5rem;
+$padding-huge: 6rem;
 
 /** BORDER-RADIUS **/
 $border-radius-default: 1.1rem;

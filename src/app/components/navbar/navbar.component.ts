@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { MenuItem } from '../../interfaces/navbar.interface';
+import { UtilitiesService } from '../../services/utilities.service';
 
 @Component({
   selector: 'navbar',

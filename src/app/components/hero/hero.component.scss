@@ -1,0 +1,15 @@
+@import "src/theme/variables";
+
+.hero {
+  background-color: $background-color-6;
+  padding: 46px 24px;
+  @media (min-width: 768px) {
+    padding: 92px 48px;
+  }
+  h1 {
+    text-align: center;
+    color: $color-light;
+    font-weight: $weight-bold;
+    text-shadow: 0 10px 30px rgba(#000, 0.3);
+  }
+}
