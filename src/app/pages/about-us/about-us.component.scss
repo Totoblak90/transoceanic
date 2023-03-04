@@ -19,6 +19,7 @@
     img {
       width: 100%;
       @media (min-width: 628px) {
+        width: calc(50% - $padding-small);
         margin-bottom: $margin-medium;
       }
     }
