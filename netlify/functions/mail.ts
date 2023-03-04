@@ -5,7 +5,10 @@ const {ADMIN_MAIL, ADMIN_PASS} = process.env
 const transporter = createTransport({
   host: 'smtp-mail.outlook.com',
   port: 587,
-  secure: false,
+  tls: {
+    ciphers: 'SSLv3',
+    minVersion: 'TLSv1.2'
+  },
   auth: {
     user: ADMIN_MAIL,
     pass: ADMIN_PASS
