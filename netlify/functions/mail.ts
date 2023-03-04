@@ -21,8 +21,6 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
       adminPass: ADMIN_PASS
     })
 
-    console.log('transporter', transporter)
-
     const data =JSON.parse(event.body || '')
 
     console.log('data',data)
@@ -54,6 +52,7 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
       body: 'MAIL SENT'
     }
   } catch (error: any) {
+    console.log('error',error)
     return {
       statusCode: 200,
       body: error.message
