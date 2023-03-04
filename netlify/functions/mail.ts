@@ -38,6 +38,18 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
 
     console.log('mailOptions',mailOptions)
 
+    console.log(
+      'transporter',
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log('error en mail',error)
+          throw new Error(error.message)
+        } else {
+          console.log(info.response)
+        }
+      });
+    )
+
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log('error en mail',error)
