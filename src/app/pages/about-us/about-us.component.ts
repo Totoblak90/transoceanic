@@ -44,10 +44,7 @@ export class AboutUsComponent {
       `
     },
     {
-      info: `
-        <p>Nuestro equipo se encuentra disperso por el mundo, pero unido en los objetivos y valores.</p>
-        <img src="assets/images/sobre-nosotros-camion.jpg" alt="Camión cargando cajas" />
-      `,
+      info: `<p>Nuestro equipo se encuentra disperso por el mundo, pero unido en los objetivos y valores.</p>`,
     },
   ]
 

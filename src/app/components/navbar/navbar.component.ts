@@ -23,7 +23,7 @@ export class NavbarComponent {
       to: 'what-we-do'
     },
     {
-      text: 'Contactenos',
+      text: 'Contáctenos',
       to: 'contact-us'
     },
   ]

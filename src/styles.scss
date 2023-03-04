@@ -83,6 +83,7 @@ h3 {
   max-width: 116.8rem;
   margin: auto;
 
+
   @media (min-width: 628px) {
     grid-template-columns: 1fr 1fr;
     gap: $padding-medium;
@@ -102,8 +103,7 @@ h3 {
   &__item {
     padding: 0 $padding-medium;
     margin-bottom: $margin-medium;
-
-
+    text-align: left;
     h3 {
       margin-bottom: $margin-small;
     }
@@ -111,7 +111,7 @@ h3 {
 
     p {
       font-size: $font-size-sm;
-      margin-bottom: $margin-small;
+      // margin-bottom: $margin-small;
       line-height: $line-height-normal;
       @media (min-width: 628px) {
         font-size: $font-size-default;
@@ -119,27 +119,8 @@ h3 {
     }
 
 
-    ul {
-      list-style: none;
-      @media (min-width: 628px) {
-        font-size: $font-size-default;
-      }
-
-
-      li:not(:last-child) {
-        margin-bottom: 0.3rem;
-      }
-    }
-
-
-    img {
-      width: 100%;
-      text-align: center;
-    }
-
     @media (min-width: 628px) {
       padding: 0 $padding-small;
-
     }
   }
 }

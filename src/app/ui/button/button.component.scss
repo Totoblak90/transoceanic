@@ -6,4 +6,10 @@ button {
   padding: $padding-small $padding-large;
   border-radius: 5rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-light;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+  }
 }

@@ -3,12 +3,16 @@
 .contact-us {
   display: flex;
   flex-direction: column;
-  padding: $padding-large $padding-small $padding-medium $padding-small;
+  max-width: 126.8rem;
+  margin: auto;
 
   @media (min-width: 960px) {
-    padding: $padding-large $padding-small $padding-large $padding-small;
     flex-direction: row;
     gap: $padding-large;
+  }
+
+  h2 {
+    margin-bottom: $margin-medium;
   }
 
 
@@ -32,6 +36,8 @@
   }
 
   .contact-form {
+    padding-top: $padding-large;
+
     margin: 0 auto $margin-medium auto;
 
     form {
@@ -54,26 +60,31 @@
   .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgba($background-color-4, 0.2);
-    padding: $padding-small $padding-large;
+    padding: $padding-large $padding-large 0 $padding-large;
     gap: $padding-huge;
+
+    @media (min-width: 960px) {
+      width: 50%;
+      align-items: center;
+    }
 
     .box {
       display: flex;
       justify-content: center;
       gap: $padding-medium;
 
-      .text-container {
+      h3 {
+        font-size: $font-size-lg;
+        margin-bottom: $margin-small;
 
-        h3 {
+        @media (min-width: 960px) {
           font-size: $font-size-xl;
-          margin-bottom: $margin-small;
-
-          @media (min-width: 960px) {
-            font-size: $font-size-h2;
-          }
         }
+      }
+
+      .text-container {
 
         p, a, ul {
           font-size: $font-size-default;
@@ -82,7 +93,7 @@
           list-style: none;
 
           @media (min-width: 960px) {
-            font-size: $font-size-lg;
+            font-size: $font-size-default;
           }
         }
 
@@ -111,7 +122,10 @@
 .vertical-line {
   display: flex;
   flex-direction: column;
-  gap: $padding-medium;
+
+  .text-container:not(:last-child) {
+    margin-bottom: $padding-small;
+  }
 
   @media (min-width: 960px) {
     flex-grow: 1;

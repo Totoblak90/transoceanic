@@ -10,4 +10,17 @@
       padding: 0 $padding-small;
     }
   }
+
+  div.img-container {
+    text-align: right;
+    margin: auto;
+    max-width: 116.8rem;
+    padding-left: $padding-small;
+    img {
+      width: 100%;
+      @media (min-width: 628px) {
+        width: calc(50% - $padding-small);
+      }
+    }
+  }
 }

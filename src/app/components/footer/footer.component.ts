@@ -14,7 +14,7 @@ export class FooterComponent {
       to: '/'
     },
     {
-      text: 'Quienes somos',
+      text: 'Quiénes somos',
       to: 'about-us'
     },
     {
@@ -22,7 +22,7 @@ export class FooterComponent {
       to: 'what-we-do'
     },
     {
-      text: 'Contactenos',
+      text: 'Contáctenos',
       to: 'contact-us'
     },
   ]

@@ -5,6 +5,7 @@ import { LogoComponent } from './logo/logo.component';
 import { ImageBadgeComponent } from './image-badge/image-badge.component';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FaIconComponent,

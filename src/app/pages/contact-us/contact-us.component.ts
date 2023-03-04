@@ -1,14 +1,18 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { MailsService } from '../../services/mails.service';
+import { UtilitiesService } from '../../services/utilities.service';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
-export class ContactUsComponent implements OnDestroy {
+export class ContactUsComponent implements OnDestroy, AfterViewInit {
+
+  @ViewChild('infoSection') infoSection: ElementRef<HTMLDivElement> | undefined;
+
   private emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   contactForm: FormGroup = this.fb.group({
@@ -21,7 +25,28 @@ export class ContactUsComponent implements OnDestroy {
 
   private _destroy$: Subject<boolean> = new Subject();
 
-  constructor (private fb: FormBuilder, private mailsService: MailsService) {}
+  constructor (private fb: FormBuilder, private mailsService: MailsService, private utilitiesService: UtilitiesService) {}
+
+
+  ngAfterViewInit(): void {
+    this.adjustSize()
+  }
+
+  @HostListener('window:resize')
+  onRezise() {
+    this.adjustSize()
+  }
+
+
+  adjustSize() {
+    if (this.infoSection) {
+      if (window.innerWidth < 960) {
+        this.infoSection.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightMobile - this.utilitiesService.footerHeightMobile) / 10 + 'rem';
+      } else {
+          this.infoSection.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightDesktop - this.utilitiesService.footerHeightDesktop) / 10 + 'rem';
+      }
+    }
+  }
 
   sendMail() {
     this.contactForm.markAllAsTouched()

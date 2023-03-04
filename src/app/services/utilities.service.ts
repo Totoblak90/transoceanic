@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UtilitiesService {
-  public headerHeightDesktop = 140;
-  public headerHeightMobile = 95;
+  public headerHeightDesktop = 110;
+  public headerHeightMobile = 80;
   public footerHeightDesktop = 85;
   public footerHeightMobile = 91;
 

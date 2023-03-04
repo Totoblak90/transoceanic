@@ -9,9 +9,9 @@
 }
 
 .logo-icon {
-  max-width: 7.5rem;
+  max-width: 6rem;
   @media (min-width: 960px) {
-    max-width: 12rem;
+    max-width: 9rem;
   }
 }
 
@@ -23,7 +23,7 @@
     font-family: $font-family-secondary !important;
     font-weight: 700;
     @media (min-width: 450px) {
-      font-size: $font-size-lg;
+      font-size: 3rem;
     }
   }
   p {
