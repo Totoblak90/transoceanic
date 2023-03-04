@@ -15,11 +15,11 @@
     text-align: right;
     margin: auto;
     max-width: 116.8rem;
-    padding-left: $padding-small;
+    padding: 0 $padding-small;
     img {
       width: 100%;
       @media (min-width: 628px) {
-        width: calc(50% - $padding-small);
+        margin-bottom: $margin-medium;
       }
     }
   }

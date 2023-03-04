@@ -85,7 +85,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 116.8rem;
-  margin: auto;
+  margin: 0 auto $margin-medium auto;
 
 
   @media (min-width: 628px) {

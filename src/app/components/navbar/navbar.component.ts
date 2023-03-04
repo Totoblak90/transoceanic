@@ -33,4 +33,11 @@ export class NavbarComponent {
   openMenu() {
     this.toggleMenu = !this.toggleMenu;
   }
+
+  scrollTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto'
+    })
+  }
 }
