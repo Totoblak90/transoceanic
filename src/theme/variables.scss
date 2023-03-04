@@ -9,6 +9,16 @@ $color-danger: #ff4444;
 $color-dark: #212121;
 $color-light: #f5f5f5;
 
+/** COLOR DE FONDO **/
+$background-color-1: #F5F5F5;    // gris claro
+$background-color-2: #FFF;        // blanco
+$background-color-3: #0E003D;    // morado oscuro
+$background-color-4: #33B5E5;    // azul
+$background-color-5: #180067;    // amarillo
+$background-color-6: #220092;    // verde claro
+$background-color-7: #2B00BC;    // rojo
+$background-color-8: #040012;  // morado
+
 /** TYPOGRAPHY **/
 $font-family-primary: 'Raleway', sans-serif;
 $font-family-secondary: 'Cinzel', serif;
@@ -32,16 +42,6 @@ $font-color-2: #FFF;         // blanco
 $font-color-3: #A300D6;      // morado
 $font-color-4: #33B5E5;      // azul
 
-/** COLOR DE FONDO **/
-$background-color-1: #F5F5F5;    // gris claro
-$background-color-2: #FFF;        // blanco
-$background-color-3: #0E003D;    // morado oscuro
-$background-color-4: #33B5E5;    // azul
-$background-color-5: #180067;    // amarillo
-$background-color-6: #220092;    // verde claro
-$background-color-7: #2B00BC;    // rojo
-$background-color-8: #040012;  // morado
-
 $weight-normal: 500;
 $weight-light: 300;
 $weight-bold: 700;
@@ -59,6 +59,7 @@ $margin-xl: 4rem;
 $margin-xxl: 5rem;
 $margin-huge: 6rem;
 
+$padding-xs: 0.75rem;
 $padding-small: 1rem;
 $padding-medium: 2rem;
 $padding-large: 3rem;

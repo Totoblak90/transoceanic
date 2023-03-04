@@ -1,1 +1,90 @@
-<p>contact-us works!</p>
+<section class="contact-us">
+  <div class="contact-form">
+    <h2>Contáctenos</h2>
+    <p>Si necesita información o desea enviar una consulta, no dude en ponerse en contacto con nosotros.</p>
+
+    <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+      <fa-input icon="user" [iconStyle]="{'font-size': '1.8rem'}" class="grid-item">
+        <input type="text" placeholder="Nombre y Apellido" autocomplete="false"
+        formControlName="name"/>
+      </fa-input>
+
+      <fa-input icon="envelope" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
+        <input type="email" placeholder="Email" autocomplete="false" formControlName="email"/>
+      </fa-input>
+
+      <fa-input icon="phone" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
+        <input type="tel" placeholder="Número de teléfono" autocomplete="false" formControlName="phone"/>
+      </fa-input>
+
+      <fa-input icon="paperclip" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
+        <input type="text" placeholder="Asunto" autocomplete="false" formControlName="subject"/>
+      </fa-input>
+
+      <fa-input icon="pen-to-square" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
+        <textarea placeholder="Mensaje" rows="15" autocomplete="false" formControlName="message"></textarea>
+      </fa-input>
+
+      <transoceanic-button type="submit" text="Enviar" class="grid-item" [disabled]="contactForm.invalid"></transoceanic-button>
+    </form>
+
+  </div>
+  <div class="info">
+
+    <div class="box">
+      <div class="icon-container">
+        <fa-icon iconName="map-location" [style]="{'font-size': '5.9rem', 'color': '#0e003d'}"></fa-icon>
+      </div>
+      <div class="text-container">
+        <div class="text-container__title">
+          <h3>Dirección</h3>
+        </div>
+        <div class="text-container__line">
+          <p>5045 American Way</p>
+          <p>Memphis, TN 38115, USA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="icon-container">
+        <fa-icon iconName="phone" [style]="{'font-size': '5.9rem', 'color': '#0e003d'}"></fa-icon>
+      </div>
+      <div class="vertical-line">
+        <div class="text-container__title">
+          <h3>Teléfonos</h3>
+        </div>
+        <div class="text-container">
+          <div class="text-container__line">
+            <p class="bold">América del Norte</p>
+            <p>USA: +1 786-5437036</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="text-container__line">
+            <p class="bold">Europa</p>
+            <p>Madrid: +34 662-407689</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="text-container__line">
+            <p class="bold">América del Sur</p>
+            <p>Argentina: +54 223-6865892 </p>
+            <p>Argentina: +54 223-6016789 </p>
+            <p>Argentina: +54 11-59959760 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="icon-container">
+        <fa-icon iconName="envelope" [style]="{'font-size': '5.9rem', 'color': '#0e003d'}"></fa-icon>
+      </div>
+      <div class="text-container">
+        <h3>Email</h3>
+        <a href="mailto: info@transoceanicms.com">info@transoceanicms.com</a>
+      </div>
+    </div>
+  </div>
+</section>

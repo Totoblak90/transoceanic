@@ -1,0 +1,29 @@
+@import "src/theme/variables";
+
+:host {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  border: 0.1rem solid lightgray;
+  background: $color-light;
+  padding: $padding-xs;
+  border-radius: 0.3rem;
+}
+
+:host ::ng-deep input, :host ::ng-deep textarea {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  color: $font-color-1;
+  text-transform: uppercase;
+  flex-grow: 1;
+  background: $color-light;
+  height: 100%;
+}
+
+
+:host(.input-focus) {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba( $color-primary, 0.2);
+  -webkit-box-shadow: 0 0 0 0.3rem rgba( $color-primary, 0.2);
+}

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FaIconComponent } from './fa-icon/fa-icon.component';
 import { LogoComponent } from './logo/logo.component';
 import { ImageBadgeComponent } from './image-badge/image-badge.component';
+import { InputComponent } from './input/input.component';
+import { ButtonComponent } from './button/button.component';
 
 
 
@@ -10,7 +12,9 @@ import { ImageBadgeComponent } from './image-badge/image-badge.component';
   declarations: [
     FaIconComponent,
     LogoComponent,
-    ImageBadgeComponent
+    ImageBadgeComponent,
+    InputComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +22,9 @@ import { ImageBadgeComponent } from './image-badge/image-badge.component';
   exports: [
     FaIconComponent,
     LogoComponent,
-    ImageBadgeComponent
+    ImageBadgeComponent,
+    InputComponent,
+    ButtonComponent
   ]
 })
 export class UiModule { }

@@ -1,0 +1,119 @@
+@import "src/theme/variables";
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  padding: $padding-large $padding-small $padding-medium $padding-small;
+
+  @media (min-width: 960px) {
+    padding: $padding-large $padding-small $padding-large $padding-small;
+    flex-direction: row;
+    gap: $padding-large;
+  }
+
+
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $margin-small;
+
+    @media (min-width: 960px) {
+      font-size: $font-size-h2;
+    }
+  }
+
+  p {
+    font-size: $font-size-default;
+    line-height: $line-height-normal;
+    margin-bottom: $margin-medium;
+
+    @media (min-width: 960px) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .contact-form {
+    margin: 0 auto $margin-medium auto;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: $padding-small;
+      column-gap: $padding-small;
+
+      .grid-item:nth-child(5) {
+        grid-column: 1 / -1;
+      }
+
+      .grid-item:nth-child(6) {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba($background-color-4, 0.2);
+    padding: $padding-small $padding-large;
+    gap: $padding-huge;
+
+    .box {
+      display: flex;
+      justify-content: center;
+      gap: $padding-medium;
+
+      .text-container {
+
+        h3 {
+          font-size: $font-size-xl;
+          margin-bottom: $margin-small;
+
+          @media (min-width: 960px) {
+            font-size: $font-size-h2;
+          }
+        }
+
+        p, a, ul {
+          font-size: $font-size-default;
+          margin-bottom: $margin-small;
+          line-height: $line-height-normal;
+          list-style: none;
+
+          @media (min-width: 960px) {
+            font-size: $font-size-lg;
+          }
+        }
+
+        ul li {
+          margin-left: $margin-small;
+        }
+
+        .bold {
+          font-weight: $weight-bold;
+        }
+
+        @media (min-width: 960px) {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .box:nth-child(2) {
+      .icon-container {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+.vertical-line {
+  display: flex;
+  flex-direction: column;
+  gap: $padding-medium;
+
+  @media (min-width: 960px) {
+    flex-grow: 1;
+  }
+}

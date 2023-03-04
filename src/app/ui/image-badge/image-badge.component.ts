@@ -9,5 +9,6 @@ export class ImageBadgeComponent {
 
   @Input() imgSrc: string = '';
   @Input() imgAlt: string = '';
+  @Input() name: string = '';
 
 }

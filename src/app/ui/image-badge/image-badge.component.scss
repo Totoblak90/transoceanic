@@ -1,14 +1,53 @@
+@import "src/theme/variables";
+
 div {
   width: 8rem;
   height: 8rem;
   border-radius: 500px;
   overflow: hidden;
-  box-shadow: 0 3rem 3rem rgba(#000, 0.2);
+  box-shadow: 0 1rem 1rem rgba(#000, 0.2);
+  margin: 0 auto $margin-medium;
+
+  @media (min-width: 525px) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 14rem;
+    height: 14rem;
+  }
 
   img {
     width: 8rem;
     height: 8rem;
     border-radius: 500px;
     border: 0.3rem solid #fff;
+
+    @media (min-width: 525px) {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    @media (min-width: 1024px) {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+}
+
+p {
+  font-size: $font-size-sm;
+  margin-bottom: $margin-small;
+  line-height: $line-height-normal;
+  text-align: center;
+  font-weight: $weight-bold;
+
+  @media (min-width: 768px) {
+    font-size: $font-size-default;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: $font-size-lg;
   }
 }

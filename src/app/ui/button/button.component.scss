@@ -1,0 +1,8 @@
+@import "src/theme/variables";
+
+button {
+  background-color: $color-primary;
+  color: $color-light;
+  padding: $padding-small $padding-large;
+  border-radius: 5rem;
+}
