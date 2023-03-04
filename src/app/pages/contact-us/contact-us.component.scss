@@ -1,4 +1,5 @@
 @import "src/theme/variables";
+@import "src/theme/animations.scss";
 
 .contact-us {
   display: flex;
@@ -64,6 +65,7 @@
     background-color: rgba($background-color-4, 0.2);
     padding: $padding-large $padding-large 0 $padding-large;
     gap: $padding-huge;
+    position: relative;
 
     @media (min-width: 960px) {
       width: 50%;
@@ -74,6 +76,7 @@
       display: flex;
       justify-content: center;
       gap: $padding-medium;
+      animation: fadeInUp $transition-medium ease-in-out;
 
       h3 {
         font-size: $font-size-lg;

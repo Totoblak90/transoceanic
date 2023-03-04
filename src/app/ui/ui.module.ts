@@ -6,6 +6,7 @@ import { ImageBadgeComponent } from './image-badge/image-badge.component';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
 import { RouterModule } from '@angular/router';
+import { IconButtonComponent } from './icon-button/icon-button.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     LogoComponent,
     ImageBadgeComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    IconButtonComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { RouterModule } from '@angular/router';
     LogoComponent,
     ImageBadgeComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    IconButtonComponent
   ]
 })
 export class UiModule { }

@@ -3,11 +3,14 @@
 :host {
   display: inline-flex;
   gap: 0.5rem;
-  align-items: flex-start;
+  align-items: center;
   border: 0.1rem solid lightgray;
   background: $color-light;
   padding: $padding-xs;
   border-radius: 0.3rem;
+  fa-icon {
+    align-self: flex-start;
+  }
 }
 
 :host ::ng-deep input, :host ::ng-deep textarea {
@@ -21,6 +24,9 @@
   height: 100%;
 }
 
+:host ::ng-deep textarea + span {
+  align-self: flex-start;
+}
 
 :host(.input-focus) {
   outline: none;

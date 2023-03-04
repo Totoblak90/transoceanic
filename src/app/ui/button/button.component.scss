@@ -6,6 +6,8 @@ button {
   padding: $padding-small $padding-large;
   border-radius: 5rem;
   cursor: pointer;
+  transition: all $transition-short;
+  font-size: $font-size-default;
 
   &:hover {
     background-color: $color-light;

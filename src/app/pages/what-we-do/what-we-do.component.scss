@@ -1,4 +1,5 @@
 @import "src/theme/variables";
+@import "src/theme/animations";
 
 .what-we-do {
   padding: $padding-large $padding-small $padding-medium $padding-small;
@@ -36,6 +37,12 @@
     justify-items: center;
 
     &--item {
+      animation: fadeInUp $transition-short linear;
+
+      @media (min-width: 768px) {
+        animation: fadeInLeft $transition-short linear;
+      }
+
       image-badge {
         margin: auto;
         margin: $margin-small 0;

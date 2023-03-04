@@ -7,25 +7,31 @@
       <fa-input icon="user" [iconStyle]="{'font-size': '1.8rem'}" class="grid-item">
         <input type="text" placeholder="Nombre y Apellido" autocomplete="false"
         formControlName="name"/>
+        <span class="error" *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched">Este campo es requerido</span>
       </fa-input>
 
       <fa-input icon="envelope" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
         <input type="email" placeholder="Email" autocomplete="false" formControlName="email"/>
+        <span class="error" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">Este campo es requerido</span>
+        <span class="error" *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched">Formato incorrecto</span>
       </fa-input>
 
       <fa-input icon="phone" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
         <input type="tel" placeholder="Número de teléfono" autocomplete="false" formControlName="phone"/>
+        <span class="error" *ngIf="contactForm.get('phone')?.hasError('required') && contactForm.get('phone')?.touched">Este campo es requerido</span>
       </fa-input>
 
       <fa-input icon="paperclip" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
         <input type="text" placeholder="Asunto" autocomplete="false" formControlName="subject"/>
+        <span class="error" *ngIf="contactForm.get('subject')?.hasError('required') && contactForm.get('subject')?.touched">Este campo es requerido</span>
       </fa-input>
 
       <fa-input icon="pen-to-square" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
         <textarea placeholder="Mensaje" rows="15" autocomplete="false" formControlName="message"></textarea>
+        <span class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">Este campo es requerido</span>
       </fa-input>
 
-      <transoceanic-button type="submit" text="Enviar" class="grid-item" [disabled]="contactForm.invalid"></transoceanic-button>
+      <transoceanic-button type="submit" text="Enviar" class="grid-item"></transoceanic-button>
     </form>
 
   </div>
