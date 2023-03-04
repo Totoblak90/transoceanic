@@ -16,36 +16,35 @@ const transporter = createTransport({
 const handler: Handler = async (event: HandlerEvent, context: any) => {
   try {
 
-    console.log({
-      adminMail: ADMIN_MAIL,
-      adminPass: ADMIN_PASS
-    })
-
     const data =JSON.parse(event.body || '')
 
-    console.log('data',data)
-
-    if (data === '') {
-      throw new Error('La data no fue proveída correctamente.')
+    if (data === '' || !data.email || !data.subject || !data.phone || !data.message || !data.name) {
+      throw new Error('La data no fue proveída correctamente.' + JSON.stringify(data))
     }
 
     const mailOptions = {
       from: ADMIN_MAIL,
       to: data.email,
       subject: data.subject,
-      text: `<p>El número de teléfono es: ${data.phone}<br/>Mensaje:${data.message}</p>`
+      text: `<p>Nombre del contacto: ${data.name} El número de teléfono es: ${data.phone}<br/>Mensaje:${data.message}</p>`
     };
 
     console.log('mailOptions',mailOptions)
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log('error en mail',error)
-        throw new Error(error.message)
-      } else {
-        console.log(info.response)
-      }
-    });
+    const promise = new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log('error en mail',error)
+          reject(error.message)
+        } else {
+          resolve(info.response)
+        }
+      });
+
+    })
+
+    await promise;
+    console.log(promise)
 
     return {
       statusCode: 200,
