@@ -51,10 +51,11 @@ export class ContactUsComponent implements OnDestroy, AfterViewInit {
   sendMail() {
     this.contactForm.markAllAsTouched()
     if (this.contactForm.valid) {
-      this.mailsService.sendMail(JSON.stringify(this.contactForm.value)).subscribe({
-        next: (res) => alert('Tu mensaje ha sido enviado correctamente. Te contestaremos a la brevedad'),
-        error: (error) => alert('Error al enviar el correo electrónico. Por favor intentá nuevamente. Si el problema persiste, ponete en contacto con el administrador ' + JSON.stringify(error))
-      })
+      alert('El servicio no funciona. Estamos trabajando para arreglarlo. Disculpá el inconveniente')
+      // this.mailsService.sendMail(JSON.stringify(this.contactForm.value)).subscribe({
+      //   next: (res) => alert('Tu mensaje ha sido enviado correctamente. Te contestaremos a la brevedad'),
+      //   error: (error) => alert('Error al enviar el correo electrónico. Por favor intentá nuevamente. Si el problema persiste, ponete en contacto con el administrador ' + JSON.stringify(error))
+      // })
     }
   }
 
