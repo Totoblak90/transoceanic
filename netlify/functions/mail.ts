@@ -47,7 +47,7 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
         } else {
           console.log(info.response)
         }
-      });
+      })
     )
 
     transporter.sendMail(mailOptions, (error, info) => {
