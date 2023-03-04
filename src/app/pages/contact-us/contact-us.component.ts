@@ -28,7 +28,7 @@ export class ContactUsComponent implements OnDestroy {
     if (this.contactForm.valid) {
       this.mailsService.sendMail(this.contactForm.value).subscribe({
         next: (res) => alert('Tu mensaje ha sido enviado correctamente. Te contestaremos a la brevedad'),
-        error: (error) => console.log('Error al enviar el correo electrónico. Por favor intentá nuevamente. Si el problema persiste, ponete en contacto con el administrador ' + error)
+        error: (error) => console.log('Error al enviar el correo electrónico. Por favor intentá nuevamente. Si el problema persiste, ponete en contacto con el administrador ' + JSON.stringify(error))
       })
     }
   }
