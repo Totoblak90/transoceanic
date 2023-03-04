@@ -5,7 +5,7 @@ const {ADMIN_MAIL, ADMIN_PASS} = process.env
 const transporter = createTransport({
   host: 'smtp-mail.outlook.com',
   port: 587,
-  secure: false,
+  secure: true,
   auth: {
     user: ADMIN_MAIL,
     pass: ADMIN_PASS
@@ -37,18 +37,6 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
     };
 
     console.log('mailOptions',mailOptions)
-
-    console.log(
-      'transporter',
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log('error en mail',error)
-          throw new Error(error.message)
-        } else {
-          console.log(info.response)
-        }
-      })
-    )
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
