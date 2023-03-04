@@ -1,6 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
 import { UtilitiesService } from './services/utilities.service';
 
 @Component({

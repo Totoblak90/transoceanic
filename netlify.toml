@@ -1,3 +1,7 @@
+[build]
+  publish = "dist/transoceanic"
+  command = "ng build"
+  functions = "./netlify/functions"
 [[redirects]]
   from = "/*"
   to = "/index.html"
