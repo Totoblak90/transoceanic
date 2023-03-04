@@ -3,7 +3,7 @@
     <h2>Contáctenos</h2>
     <p>Si necesita información o desea enviar una consulta, no dude en ponerse en contacto con nosotros.</p>
 
-    <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+    <form [formGroup]="contactForm" (ngSubmit)="sendMail()" #contactFormRef data-netlify=true>
       <fa-input icon="user" [iconStyle]="{'font-size': '1.8rem'}" class="grid-item">
         <input type="text" placeholder="Nombre y Apellido" autocomplete="false"
         formControlName="name"/>

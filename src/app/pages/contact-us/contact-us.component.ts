@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent {
+  @ViewChild('contactFormRef') contactFormRef: ElementRef<HTMLFormElement> | undefined;
+
   private emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   contactForm: FormGroup = this.fb.group({
@@ -23,6 +25,15 @@ export class ContactUsComponent {
   sendMail() {
     this.contactForm.markAllAsTouched()
     if (this.contactForm.valid) {
+        const formData = new FormData(this.contactFormRef!.nativeElement);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          // @ts-ignore
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then((res) => console.log("Form successfully submitted", res))
+          .catch((error) => alert(error));
 
     }
   }
