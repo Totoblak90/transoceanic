@@ -35,11 +35,7 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
       from: ADMIN_MAIL,
       to: data.email,
       subject: data.subject,
-      text: `
-        El número de teléfono es: ${data.phone}
-        Mensaje:
-        ${data.message}
-      `
+      text: `<p>El número de teléfono es: ${data.phone}<br/>Mensaje:${data.message}</p>`
     };
 
     console.log('mailOptions',mailOptions)
