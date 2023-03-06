@@ -37,9 +37,12 @@
   }
 
   .contact-form {
-    padding-top: $padding-large;
-
+    padding: $padding-large $padding-small 0 $padding-small;
     margin: 0 auto $margin-medium auto;
+
+    @media (min-width: 960px) {
+      padding: $padding-large 0 0 $padding-small;
+    }
 
     form {
       display: grid;
@@ -47,11 +50,18 @@
       row-gap: $padding-small;
       column-gap: $padding-small;
 
-      .grid-item:nth-child(5) {
+      .form-field {
+        fa-input {
+          width: 100%;
+          margin-bottom: $margin-xs !important;
+        }
+      }
+
+      .form-field:nth-child(5) {
         grid-column: 1 / -1;
       }
 
-      .grid-item:nth-child(6) {
+      .form-field:nth-child(6) {
         grid-column: 1 / -1;
         justify-self: center;
       }

@@ -4,34 +4,46 @@
     <p>Si necesita información o desea enviar una consulta, no dude en ponerse en contacto con nosotros.</p>
 
     <form [formGroup]="contactForm" (ngSubmit)="sendMail()" >
-      <fa-input icon="user" [iconStyle]="{'font-size': '1.8rem'}" class="grid-item">
-        <input type="text" placeholder="Nombre y Apellido" autocomplete="false"
-        formControlName="name"/>
+      <div class="form-field">
+        <fa-input icon="user" [iconStyle]="{'font-size': '1.8rem'}">
+          <input type="text" placeholder="Nombre y Apellido" autocomplete="false"
+          formControlName="name"/>
+        </fa-input>
         <span class="error" *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched">Este campo es requerido</span>
-      </fa-input>
+      </div>
 
-      <fa-input icon="envelope" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
-        <input type="email" placeholder="Email" autocomplete="false" formControlName="email"/>
+      <div class="form-field">
+        <fa-input icon="envelope" [iconStyle]="{'font-size': '1.8rem'}">
+          <input type="email" placeholder="Email" autocomplete="false" formControlName="email"/>
+        </fa-input>
         <span class="error" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">Este campo es requerido</span>
         <span class="error" *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched">Formato incorrecto</span>
-      </fa-input>
+      </div>
 
-      <fa-input icon="phone" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
-        <input type="tel" placeholder="Número de teléfono" autocomplete="false" formControlName="phone"/>
+      <div class="form-field">
+        <fa-input icon="phone" [iconStyle]="{'font-size': '1.8rem'}">
+          <input type="tel" placeholder="Número de teléfono" autocomplete="false" formControlName="phone"/>
+        </fa-input>
         <span class="error" *ngIf="contactForm.get('phone')?.hasError('required') && contactForm.get('phone')?.touched">Este campo es requerido</span>
-      </fa-input>
+      </div>
 
-      <fa-input icon="paperclip" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
-        <input type="text" placeholder="Asunto" autocomplete="false" formControlName="subject"/>
+      <div class="form-field">
+        <fa-input icon="paperclip" [iconStyle]="{'font-size': '1.8rem'}">
+          <input type="text" placeholder="Asunto" autocomplete="false" formControlName="subject"/>
+        </fa-input>
         <span class="error" *ngIf="contactForm.get('subject')?.hasError('required') && contactForm.get('subject')?.touched">Este campo es requerido</span>
-      </fa-input>
+      </div>
 
-      <fa-input icon="pen-to-square" class="grid-item" [iconStyle]="{'font-size': '1.8rem'}">
-        <textarea placeholder="Mensaje" rows="15" autocomplete="false" formControlName="message"></textarea>
+      <div class="form-field">
+        <fa-input icon="pen-to-square" [iconStyle]="{'font-size': '1.8rem'}">
+          <textarea placeholder="Mensaje" rows="15" autocomplete="false" formControlName="message"></textarea>
+        </fa-input>
         <span class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">Este campo es requerido</span>
-      </fa-input>
+      </div>
 
-      <transoceanic-button type="submit" text="Enviar" class="grid-item"></transoceanic-button>
+      <div class="form-field">
+        <transoceanic-button type="submit" text="Enviar"></transoceanic-button>
+      </div>
     </form>
 
   </div>
