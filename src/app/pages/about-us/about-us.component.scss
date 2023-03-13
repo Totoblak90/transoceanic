@@ -15,16 +15,15 @@
     margin: auto;
     max-width: 116.8rem;
     padding: 0 $padding-small;
+    margin-bottom: calc($margin-medium * 2);
 
     @media (min-width: 628px) {
       text-align: center;
     }
     img {
       width: 100%;
-      margin-bottom: $margin-small;
       @media (min-width: 628px) {
         width: 50%;
-        margin-bottom: $margin-medium;
       }
     }
   }
