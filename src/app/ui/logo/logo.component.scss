@@ -9,7 +9,10 @@
 }
 
 .logo-icon {
-  max-width: 6rem;
+  max-width: 4.5rem;
+  @media (min-width: 338px) {
+    max-width: 6rem;
+  }
   @media (min-width: 960px) {
     max-width: 9rem;
   }
@@ -19,9 +22,13 @@
   h2 {
     line-height: 1;
     letter-spacing: 0.5rem;
-    font-size: $font-size-default;
     font-family: $font-family-secondary !important;
     font-weight: 700;
+    font-size: 1.45rem;
+    @media (min-width: 338px) {
+      font-size: $font-size-default;
+    }
+
     @media (min-width: 450px) {
       font-size: 3rem;
     }
@@ -30,5 +37,8 @@
     line-height: 1.5;
     letter-spacing: 0.3rem;
     font-family: $font-family-secondary;
+    @media (max-width: 338px) {
+      font-size: 1.1rem;
+    }
   }
 }

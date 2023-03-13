@@ -25,6 +25,14 @@ export class ContactUsComponent implements OnDestroy, AfterViewInit {
 
   private _destroy$: Subject<boolean> = new Subject();
 
+  get contactIconSize() {
+    if (window.innerWidth > 768) {
+      return {'font-size': '5.9rem', 'color': '#0e003d'}
+    } else {
+      return {'font-size': '4.2rem', 'color': '#0e003d'}
+    }
+  }
+
   constructor (private fb: FormBuilder, private mailsService: MailsService, private utilitiesService: UtilitiesService) {}
 
 
@@ -41,8 +49,9 @@ export class ContactUsComponent implements OnDestroy, AfterViewInit {
   adjustSize() {
     if (this.infoSection) {
       if (window.innerWidth < 960) {
-        this.infoSection.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightMobile - this.utilitiesService.footerHeightMobile) / 10 + 'rem';
-      } else {
+        this.infoSection.nativeElement.style.height = 'auto'
+        this.infoSection.nativeElement.style.paddingBottom = '1rem'
+      } else if (window.innerWidth >= 960){
           this.infoSection.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightDesktop - this.utilitiesService.footerHeightDesktop) / 10 + 'rem';
       }
     }

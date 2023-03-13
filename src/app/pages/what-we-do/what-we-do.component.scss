@@ -9,25 +9,16 @@
   }
 
   h3 {
-    font-size: $font-size-xl;
     margin-bottom: $margin-large;
-
-    @media (min-width: 768px) {
-      font-size: $font-size-h2;
-    }
   }
 
   p {
-    font-size: $font-size-default;
     margin-bottom: $margin-small;
     line-height: $line-height-normal;
     &:nth-child(5) {
       margin-bottom: $margin-large;
     }
 
-    @media (min-width: 768px) {
-      font-size: $font-size-lg;
-    }
   }
 
   &__grid {
