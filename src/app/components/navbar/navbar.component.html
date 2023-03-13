@@ -11,7 +11,7 @@
     </button>
     <nav>
       <ul>
-        <li [routerLink]="item.to" *ngFor="let item of menuItems" (click)="toggleMenu = false; scrollTop()">{{ item.text | uppercase }}</li>
+        <li [routerLink]="item.to" *ngFor="let item of menuItems" (click)="openMenu(); scrollTop()">{{ item.text | uppercase }}</li>
       </ul>
     </nav>
   </div>

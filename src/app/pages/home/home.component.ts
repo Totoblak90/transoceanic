@@ -23,9 +23,15 @@ export class HomeComponent implements AfterViewInit {
 
   adjustSize() {
     if (this.homePage) {
-      if (window.innerWidth < 960) {
+      if (window.innerWidth <= 338) {
+        this.homePage.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightMini - this.utilitiesService.footerHeightMobile) / 10 + 'rem';
+      }
+
+      else if (window.innerWidth < 960 && window.innerWidth > 338) {
         this.homePage.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightMobile - this.utilitiesService.footerHeightMobile) / 10 + 'rem';
-      } else {
+      }
+
+      else {
           this.homePage.nativeElement.style.height = (window.innerHeight - this.utilitiesService.headerHeightDesktop - this.utilitiesService.footerHeightDesktop) / 10 + 'rem';
       }
     }

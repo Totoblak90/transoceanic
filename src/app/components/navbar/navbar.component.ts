@@ -30,8 +30,11 @@ export class NavbarComponent {
 
   toggleMenu = false;
 
+  constructor(private utilitiesService: UtilitiesService) {}
+
   openMenu() {
     this.toggleMenu = !this.toggleMenu;
+    this.utilitiesService.isMobileExpandedMenuOpen.next(this.toggleMenu);
   }
 
   scrollTop() {

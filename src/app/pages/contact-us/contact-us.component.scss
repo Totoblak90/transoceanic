@@ -138,3 +138,8 @@
     flex-grow: 1;
   }
 }
+
+.hide {
+  opacity: 0;
+  z-index: -10;
+}

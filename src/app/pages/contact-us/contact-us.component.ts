@@ -1,6 +1,6 @@
 import { Component, OnDestroy, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { MailsService } from '../../services/mails.service';
 import { UtilitiesService } from '../../services/utilities.service';
 
@@ -31,6 +31,17 @@ export class ContactUsComponent implements OnDestroy, AfterViewInit {
     } else {
       return {'font-size': '4.2rem', 'color': '#0e003d'}
     }
+  }
+
+  get toggleInfoContainer() {
+    const isExpandedMenuOpen = this.utilitiesService.isMobileExpandedMenuOpen.value
+
+    const cssClass: {[key: string]: boolean} = {}
+
+    if (isExpandedMenuOpen) cssClass['hide'] = true
+    else cssClass['hide'] = false
+
+    return cssClass;
   }
 
   constructor (private fb: FormBuilder, private mailsService: MailsService, private utilitiesService: UtilitiesService) {}

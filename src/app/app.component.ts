@@ -23,9 +23,15 @@ export class AppComponent implements AfterViewInit {
     const router_outlet_container = document.getElementById('router-outlet-container')
 
     if (router_outlet_container) {
-      if (window.innerWidth <= 960) {
+      if (window.innerWidth <= 338) {
+        router_outlet_container.style.marginTop = this.utilitiesService.headerHeightMini / 10 + 'rem'
+      }
+
+      else if (window.innerWidth <= 960 && window.innerWidth > 338) {
         router_outlet_container.style.marginTop = this.utilitiesService.headerHeightMobile / 10 + 'rem'
-      } else {
+      }
+
+      else {
         router_outlet_container.style.marginTop = this.utilitiesService.headerHeightDesktop / 10 + 'rem'
       }
     }

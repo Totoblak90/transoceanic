@@ -21,6 +21,7 @@
     }
     img {
       width: 100%;
+      margin-bottom: $margin-small;
       @media (min-width: 628px) {
         width: 50%;
         margin-bottom: $margin-medium;
